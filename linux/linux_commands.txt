@@ -1,0 +1,15 @@
+sortfile.txt | uniq | wc -l (jos useita samoja sanoja niin tää sorttaa ilman tuplia)
+
+NMAP
+
+nmap -sC -sV -oN nmap/initial 10.10.10.10 (tekee filen nmap kaansioon nimellä initial
+nmap -p- -oN nmap/all_ports (all ports)
+nmap -A -p- -oN nmap/all_ports (all ports) Agressiivinen
+nmap -Pn -sV --script=vulners 8.8.8.8
+nmap -n -vv -p22 -oN nmap/sshbrute --script=ssh-brute.nse
+
+-sV = probe open ports to determine service/version info
+-A = enable os detection, version detection, script scanning and traceroute
+-vv = verbosity
+-Pn kohtele että kaikki host online
+-sO = Ip protocol scan
