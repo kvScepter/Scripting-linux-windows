@@ -1,0 +1,34 @@
+ctrl+space antaa helpin
+gal = alias (gal echo)
+
+cd users (relative path
+cd c:\users (absolute path)
+
+get-childitem | select-object name
+(get-childitem | select-object).name
+get-childitem | select-object -First 1 (-Last)
+
+Get-ChildItem | Select-Object LastWriteTime, name | Sort-Object lastwritetime
+
+ipconfig
+
+cd $home (menee kotihakemistoon)
+
+get-childitem | format-list (* lisää niin kattava. Alias fl)
+
+get-childitem | out-gridview (dir sisältö GUI justkaan, sis filter ominaisuuden)
+get-childitem | out-file somefile.txt (tulostaa dir sisällön somefile.txt tiedostoon)
+get-content somefile.txt
+notepad.exe somefile.txt
+new-item -itemtype Directory uusikansio (sinne missä oot just nyt)
+mkdir uusikansio (tekee saman)
+
+$profile (näyttää polun missä se on)
+test-path $profile
+$PROFILE | Select-Object *
+
+[char]0X263a
+
+Get-Process | select -First 10
+Get-psdrive
+cd env:
